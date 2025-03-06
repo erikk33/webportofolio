@@ -1,0 +1,61 @@
+.navbarOnly {
+    font-family: cursive;
+
+}
+p {
+    font-size: 18px;
+    padding: 15px;
+}
+
+.img1 {
+    width: 600px;
+    height: 280px;
+    overflow-y: scroll;
+    background-image: url("/assets/mountainImage.jpg");
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+/* Sembunyikan checkbox */
+.checkbox {
+    display: none;
+}
+
+
+.checkbox-label {
+    position: fixed;
+    right: 20px; 
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Styling ikon */
+.floating {
+    position: absolute;
+    font-size: 30px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.moon {
+    opacity: 1;
+}
+
+.sun {
+    opacity: 0;
+}
+
+.checkbox:checked + .checkbox-label .moon {
+    opacity: 0;
+}
+
+.checkbox:checked + .checkbox-label .sun {
+    opacity: 1;
+}
