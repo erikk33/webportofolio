@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
         <ul class="navbar-nav  mb-2 mb-lg-0 text-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="/halamanUtama">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Projek</a>
