@@ -1,6 +1,6 @@
 <nav class="navbarOnly navbar navbar-expand-lg bg-body-tertiary text-center">
     <div class="container-fluid justify-content-center">
-      <a class="navbar-brand justify-content-between" href="#">Portofolio Erik's</a>
+      <a class="navbar-brand justify-content-between" href="/halamanUtama">Portofolio Erik's</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

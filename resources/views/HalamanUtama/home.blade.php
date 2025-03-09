@@ -11,7 +11,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href={{ asset('css/style.css') }}>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Maven+Pro&display=swap" rel="stylesheet">
 </head>
 <x-navbar class="navbarOnly" />
 
@@ -97,42 +99,28 @@
             </p>
         </div>
     </main>
+
     <input type="checkbox" class="checkbox" id="checkbox">
     <label for="checkbox" class="checkbox-label">
-        <i class="floating moon">🌙</i>
-        <i class="floating sun">🌞</i>
+     <b class="floating moon" accesskey="n">
+        <img src="/assets/animemoon.png" style="    width: 55px;
+    height: 55px;
+    border-radius: 50%;" alt="moon">
+     </b>
+     <b class="floating sun" accesskey="s">🌞</b>
     </label>
-
-    <script>
-        // const html = document.getElementById('htmlPage');
-        // const checkbox = document.getElementById("checkbox");
-        // checkbox.addEventListener("change", () => {
-        //     if(checkbox.checked){
-        //         html.setAttribute("data-bs-theme", "black");
-        //     }
-        //     else {
-        //         html.setAttribute("data-bs-theme" ,"light");
-        //     }
-        // })
-
-
-
-
-
-
-
-
-
-        const html = document.getElementById("htmlPage");
-        const checkbox = document.getElementById("checkbox");
-        checkbox.addEventListener("change", () => {
-            if (checkbox.checked) {
-                html.setAttribute("data-bs-theme", "dark")
-            } else {
-                html.setAttribute("data-bs-theme", "light")
-            }
-        })
-    </script>
+ <script>
+    const html = document.getElementById("htmlPage");
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change",() => {
+        if(checkbox.checked) {
+            html.setAttribute("data-bs-theme","dark");
+        }
+        else {
+            html.setAttribute("data-bs-theme","light")
+        }
+    })
+ </script>
 </body>
 
 </html>
