@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/halamanUtama', function () {
     return view('HalamanUtama.home');
 });
+
+
+
+Route::get('/page/projek', function () {
+    return view('HalamanProjek.projek');
+});

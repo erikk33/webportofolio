@@ -12,8 +12,9 @@
     </script>
     <link rel="stylesheet" href={{ asset('css/style.css') }}>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Maven+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Maven+Pro&display=swap"
+        rel="stylesheet">
 </head>
 <x-navbar class="navbarOnly" />
 
@@ -22,55 +23,71 @@
     <main>
         <div class="container mt-3"></div>
         <section>
-        <div class="container mt-2">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est
-                laborum.
-                Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra,
-                est
-                eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod
-                gravida. Duis
-                ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula
-                eu
-                tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat
-                mi. Donec
-                fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat
-                quis, neque.
-                Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget
-                erat. Cras
-                mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet
-                et,
-                pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea
-                dictumst.
-                Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna
-                nec
-                erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                Pellentesque
-                suscipit. Mauris pharetra varius quam, sit amet vulputate nisi. Vestibulum malesuada sodales odio.
-                Vivamus
-                vestibulum nulla nec ante. Praesent placerat risus quis eros. Fusce pellentesque suscipit nibh. Integer
-                eu lacus
-                accumsan arcu fermentum euismod. Donec pulvinar porttitor tellus. Aliquam venenatis. Nam at tortor in
-                tellus
-                interdum sagittis. Praesent gravida hendrerit sapien. Sed pretium, ligula sollicitudin laoreet viverra,
-                tortor
-                libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi
-                purus
-                libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit
-                tortor. Sed
-                semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar
-                nunc
-                sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
-            </p>
-        </div>
-    </section>
+            <div class="container mt-2">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea
+                    commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim
+                    id est
+                    laborum.
+                    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo
+                    pharetra,
+                    est
+                    eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod
+                    gravida. Duis
+                    ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper,
+                    ligula
+                    eu
+                    tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum
+                    consequat
+                    mi. Donec
+                    fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat
+                    quis, neque.
+                    Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus
+                    eget
+                    erat. Cras
+                    mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis,
+                    laoreet
+                    et,
+                    pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse
+                    platea
+                    dictumst.
+                    Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum
+                    urna
+                    nec
+                    erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Pellentesque
+                    suscipit. Mauris pharetra varius quam, sit amet vulputate nisi. Vestibulum malesuada sodales odio.
+                    Vivamus
+                    vestibulum nulla nec ante. Praesent placerat risus quis eros. Fusce pellentesque suscipit nibh.
+                    Integer
+                    eu lacus
+                    accumsan arcu fermentum euismod. Donec pulvinar porttitor tellus. Aliquam venenatis. Nam at tortor
+                    in
+                    tellus
+                    interdum sagittis. Praesent gravida hendrerit sapien. Sed pretium, ligula sollicitudin laoreet
+                    viverra,
+                    tortor
+                    libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                    Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue.
+                    Morbi
+                    purus
+                    libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit
+                    tortor. Sed
+                    semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu
+                    pulvinar
+                    nunc
+                    sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+                </p>
+            </div>
+        </section>
         <div class="img1">
 
             <p class="justify-content-center">
@@ -102,25 +119,26 @@
 
     <input type="checkbox" class="checkbox" id="checkbox">
     <label for="checkbox" class="checkbox-label">
-     <b class="floating moon" accesskey="n">
-        <img src="/assets/animemoon.png" style="    width: 55px;
+        <b class="floating moon" accesskey="n">
+            <img src="/assets/animemoon.png" style="    width: 55px;
     height: 55px;
-    border-radius: 50%;" alt="moon">
-     </b>
-     <b class="floating sun" accesskey="s">🌞</b>
+    border-radius: 50%;"
+                alt="moon">
+        </b>
+        <b class="floating sun" accesskey="s"><img src="/assets/sunMode.png"
+                style="width: 55px; height: 55px; border-radius: 50%;" alt=""></b>
     </label>
- <script>
-    const html = document.getElementById("htmlPage");
-    const checkbox = document.getElementById("checkbox");
-    checkbox.addEventListener("change",() => {
-        if(checkbox.checked) {
-            html.setAttribute("data-bs-theme","dark");
-        }
-        else {
-            html.setAttribute("data-bs-theme","light")
-        }
-    })
- </script>
+    <script>
+        const html = document.getElementById("htmlPage");
+        const checkbox = document.getElementById("checkbox");
+        checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+                html.setAttribute("data-bs-theme", "dark");
+            } else {
+                html.setAttribute("data-bs-theme", "light")
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@
             <a class="nav-link active" aria-current="page" href="/halamanUtama">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Projek</a>
+            <a class="nav-link active" aria-current="page" href="{{ url("/page/projek") }}">Projek</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">About me</a>
@@ -20,7 +20,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><img src="/assets/iconMan.png" alt="user image" width="25px" height="25px"></a>
+            <a class="nav-link active" aria-current="page" href="#">`<img src="{{ asset("/assets/fotoDiri.jpg") }}" style="border-radius: 50%"; alt="user image" width="25px" height="25px"></a>
           </li>
           {{-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
