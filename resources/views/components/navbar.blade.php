@@ -1,3 +1,4 @@
+<!--Use library boostrap-->
 <nav class="navbarOnly navbar navbar-expand-lg bg-body-tertiary text-center">
     <div class="container-fluid justify-content-center">
       <a class="navbar-brand justify-content-between" href="/halamanUtama">Portofolio Erik's</a>
@@ -16,7 +17,7 @@
             <a class="nav-link active" aria-current="page" href="#">About me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contact me</a>
+            <a class="nav-link active" aria-current="page" href="/page/contact-me">Contact me</a>
           </li>
 
           <li class="nav-item">

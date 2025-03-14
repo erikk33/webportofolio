@@ -26,3 +26,7 @@ Route::get('/halamanUtama', function () {
 Route::get('/page/projek', function () {
     return view('HalamanProjek.projek');
 });
+
+Route::get('/page/contact-me',function() {
+    return view("HalamanProjek.contact");
+});

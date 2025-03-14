@@ -89,7 +89,7 @@
             </div>
         </section>
         <div class="img1">
-
+<!--Area for paragraph about author etc -->
             <p class="justify-content-center">
                 Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu
                 pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing
@@ -116,7 +116,7 @@
             </p>
         </div>
     </main>
-
+<!--code for dark mode feature use input checkbox for base-->
     <input type="checkbox" class="checkbox" id="checkbox">
     <label for="checkbox" class="checkbox-label">
         <b class="floating moon" accesskey="n">

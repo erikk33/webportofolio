@@ -1,16 +1,18 @@
+/*styling to navbar*/
 .navbarOnly {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: normal;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-
-
 }
+
+/*styling to universal paragraf*/
 p {
     font-size: 18px;
     padding: 15px;
 }
 
+/*Styling to image is focuses to one image on page home*/
 .img1 {
     flex-grow: 1;
     width: 600px;
@@ -25,7 +27,7 @@ p {
     display: none;
 }
 
-
+/*styling design to button night mode and light mode*/
 .checkbox-label {
     position: fixed;
     right: 20px;
@@ -49,20 +51,22 @@ p {
     font-size: 30px;
     transition: opacity 0.3s ease-in-out;
 }
-
+/*add opacity to icon night mode*/
 .moon {
     opacity: 1;
 
 }
-
+/*add opactity to icon light mode*/
 .sun {
     opacity: 0;
 }
 
+/*logic once button moon if checked*/
 .checkbox:checked + .checkbox-label .moon {
     opacity: 0;
 }
 
+/*logic once button sun if checked*/
 .checkbox:checked + .checkbox-label .sun {
     opacity: 1;
 }
