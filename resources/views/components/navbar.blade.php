@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/style.css">
 <!--Use library boostrap-->
 <nav class="navbarOnly navbar navbar-expand-lg bg-body-tertiary text-center">
     <div class="container-fluid justify-content-center">
@@ -19,7 +20,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/page/contact-me">Contact me</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link disable" id="timeNow"></a>
+          </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">`<img src="{{ asset("/assets/fotoDiri.jpg") }}" style="border-radius: 50%"; alt="user image" width="25px" height="25px"></a>
           </li>
@@ -43,3 +46,13 @@
       </div>
     </div>
   </nav>
+
+
+  <script>
+
+        const now = new Date();
+    const currentTime = now.toLocaleTimeString();
+
+   const timeNow=  document.getElementById("timeNow").innerText = currentTime;
+
+  </script>

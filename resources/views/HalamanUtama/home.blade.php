@@ -138,6 +138,8 @@
                 html.setAttribute("data-bs-theme", "light")
             }
         })
+
+
     </script>
 </body>
 

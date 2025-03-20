@@ -18,10 +18,18 @@ p {
     width: 600px;
     height: 280px;
     overflow-y: scroll;
-    background-image: url("/assets/mountainImage.jpg");
-    -webkit-mask-image: linear-gradient(black, transparent);
-    mask-image: linear-gradient(black, transparent);
+    background-image: url("/assets/jellyFishimage.jpg");
+    -webkit-mask-image: linear-gradient(rgb(0 0 0/ 90%));
+    mask-image: radial-gradient(rgb(0 0  0 / 100%) );
+    mask-size: cover;
+    box-shadow: 20%;
+    font: bold;
+    color: black;
 }
+
+
+
+
 /*hide checkbox*/
 .checkbox {
     display: none;
@@ -51,22 +59,31 @@ p {
     font-size: 30px;
     transition: opacity 0.3s ease-in-out;
 }
+
 /*add opacity to icon night mode*/
 .moon {
     opacity: 1;
 
 }
+
 /*add opactity to icon light mode*/
 .sun {
     opacity: 0;
 }
 
 /*logic once button moon if checked*/
-.checkbox:checked + .checkbox-label .moon {
+.checkbox:checked+.checkbox-label .moon {
     opacity: 0;
 }
 
 /*logic once button sun if checked*/
-.checkbox:checked + .checkbox-label .sun {
+.checkbox:checked+.checkbox-label .sun {
     opacity: 1;
+
+}
+
+.navbar-toggler:focus,
+.navbar-toggler-icon:focus{
+    box-shadow: none;
+    outline: none;
 }
