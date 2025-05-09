@@ -37,7 +37,7 @@
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>2
             </ul>
           </li> --}}
 
@@ -49,10 +49,12 @@
 
 
   <script>
-
+    function updateTime() {
         const now = new Date();
     const currentTime = now.toLocaleTimeString();
 
    const timeNow=  document.getElementById("timeNow").innerText = currentTime;
+    }
 
+setInterval(updateTime,1000)
   </script>

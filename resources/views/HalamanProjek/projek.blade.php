@@ -19,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Maven+Pro&display=swap"
     rel="stylesheet">
 </script>
+<x-aksebelity-menu/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 

@@ -10,17 +10,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+    <x-navbar class="navbarOnly" />
     <link rel="stylesheet" href={{ asset('css/style.css') }}>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Maven+Pro&display=swap"
         rel="stylesheet">
 </head>
-<x-navbar class="navbarOnly" />
+
 
 
 <body>
+    <x-aksebelity-menu/>
     <main>
+        <img src="/assets/officeRoom.jpg" class="img-fluid rounded mx-auto d-block mt-4" style="width: 720px; width: 480px; align-content: center;"  alt="...">
         <div class="container mt-3"></div>
         <section>
             <div class="container mt-2">
@@ -114,6 +117,12 @@
                 non,
                 consectetur eget, bibendum bibendum.
             </p>
+        </div>
+
+        <div>
+            <div class="image">
+                <div class="content"></div>
+            </div>
         </div>
     </main>
 <!--code for dark mode feature use input checkbox for base-->
