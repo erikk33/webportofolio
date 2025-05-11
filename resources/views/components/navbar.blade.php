@@ -55,6 +55,5 @@
 
    const timeNow=  document.getElementById("timeNow").innerText = currentTime;
     }
-
 setInterval(updateTime,1000)
   </script>

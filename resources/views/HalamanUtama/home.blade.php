@@ -21,7 +21,8 @@
 
 
 <body>
-    <x-aksebelity-menu/>
+    <x-chatbox/>
+    {{-- <x-aksebelity-menu/> --}}
     <main>
         <img src="/assets/officeRoom.jpg" class="img-fluid rounded mx-auto d-block mt-4" style="width: 720px; width: 480px; align-content: center;"  alt="...">
         <div class="container mt-3"></div>

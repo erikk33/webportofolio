@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ChatBotController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +30,6 @@ Route::get('/page/projek', function () {
 Route::get('/page/contact-me',function() {
     return view("HalamanProjek.contact");
 });
+
+
+Route::post('/chatbot/send', [ChatBotController::class, 'send']);
