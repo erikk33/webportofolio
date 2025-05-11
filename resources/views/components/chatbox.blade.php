@@ -1,11 +1,12 @@
 <!-- Chatbot Icon & Popup - Glassmorphism Style -->
 <style>
-    #chatbot {
-        position: fixed;
-        bottom: 20px;
-        left: 20px; /* <- dari right ke left */
-        z-index: 1000;
-    }
+  #chatbot {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 800; /* diturunkan dari 1000 */
+}
+
 
     #chatWindow {
         backdrop-filter: blur(15px);
@@ -50,6 +51,19 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         cursor: pointer;
     }
+    #chatWindow {
+    pointer-events: auto;
+    z-index: 9998;
+}
+
+.chat-icon {
+    z-index: 9998;
+}
+
+.checkbox-label {
+    pointer-events: auto; /* bisa klik */
+}
+
 </style>
 
 
