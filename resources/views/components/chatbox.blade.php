@@ -4,7 +4,7 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    z-index: 800; /* diturunkan dari 1000 */
+    z-index: 1000;
 }
 
 
@@ -14,9 +14,17 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         border-radius: 16px;
-        color: #000; /* <- pastikan default teks hitam */
+        color: #000;
         transition: all 0.3s ease-in-out;
+        /* opacity: 0;
+        animation: fadeIn 2s forwards; */
     }
+    /* @keyframes fadeIn{
+       to {
+        opacity: 1;
+
+       }
+    } */
 
     #chatWindow input,
     #chatWindow button {
@@ -55,7 +63,14 @@
     pointer-events: auto;
     z-index: 9998;
 }
-
+    .closeChat {
+    background: none; border: none; font-size: 18px; color: white; border-radius: 20%; opacity: 0; animation: fadeInClose 2s forwards;
+    }
+@keyframes fadeInClose {
+    to {
+        opacity: 1;
+    }
+}
 .chat-icon {
     z-index: 9998;
 }
@@ -73,7 +88,10 @@
     <div id="chatWindow" style="display: none; width: 320px; height: 460px; padding: 16px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
             <strong style="font-size: 16px;">ChatBot</strong>
-            <button id="closeChat" style="background: none; border: none; font-size: 18px; color: white;">✖</button>
+            <button id="closeChat" style=" background: none; border: none; font-size: 18px; color: white; border-radius: 20%; opacity: 0; animation: fadeInClose 1.5s forwards; @keyframes fadeInClose {
+            to {
+            opacity : 0;}
+            }" >✖</button>
         </div>
         <div id="chatMessages" style="height: 300px; overflow-y: auto; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; margin-bottom: 10px;"></div>
         <form id="chatForm">

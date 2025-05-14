@@ -4,8 +4,12 @@
 //fungsi dari chatbot dengan integasi together ai
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+
+use PhpParser\Error;
+use function Laravel\Prompts\error;
 
 class ChatBotController extends Controller
 {
@@ -57,7 +61,7 @@ class ChatBotController extends Controller
         ])) {
             return response()->json([
                 'choices' => [
-                    ['message' => ['content' => 'alamat banjar tegal buah jalan gunung mas perumaha graha parta lestari blok j no 4 no telp : +62895331309082 WA']]
+                    ['message' => ['content' => 'alamat banjar tegal buah jalan gunung mas perumahan graha parta lestari blok j no 4 no telp : +62895331309082 WA']]
                 ]
             ]);
         };
@@ -74,15 +78,6 @@ class ChatBotController extends Controller
             ]);
         };
 
-
-
-
-
-
-
-
-
-
         if (in_array($message, [
             "versi laravel yang digunakan ?"
         ])) {
@@ -98,6 +93,48 @@ class ChatBotController extends Controller
                 "choices" => [["message" => ["content" => "indonesia"]]]
             ]);
         };
+
+
+        if (in_array($message, [
+            "author sedang mengikuti pelatihan apa ?",
+            "which learning author do now ?"
+        ])) {
+            return response()->json(["choices" =>
+            [
+                ["message" => ["content" => ["pelatihan google arcade 2025"]]]
+            ]]);
+        };
+
+        if (in_array($message, [
+            "apa saja pelatihan yang pernah diikuti oleh author ?"
+        ])) {
+            return response()->json([
+                "choices" => [["message" => ["content" => ["digitaltalent, dikoding, dan google arcade"]]]]
+            ]);
+        }
+
+        if (in_array($message, ["apa saja pengalaman magang author ?"])) {
+            return response()->json([
+                "choices" => [["message" => ["content" => "pengalaman magang di guestpro selama
+            4 bulan bagian fullstack Developer"]]]
+            ]);
+        }
+
+        if(in_array($message,["/help"])) {
+            return response()->json(["choices" => [["message" => ["content" => "question can you write :
+            siapa author website ini ?
+            tentang server ini ?
+            kapan web porto ini dibuat ?
+            informasi contact author ?
+            framework yang digunakan web ini ?
+            versi laravel yang digunakan ?
+            region author ?"]]]
+        ]);
+        }
+
+        //nanti bisa ditambahkan try and catch cari referensi lebih dalam di google atau internet
+        // try {
+
         $response = Http::withHeaders([
             'Authorization' => 'Bearer 9bcdda54b8dabe0622af6cd81e568a2176d5374a3ebe0b569f9c17a6d7f78ef9',
             'Content-Type' => 'application/json',
@@ -110,5 +147,14 @@ class ChatBotController extends Controller
         ]);
 
         return response()->json($response->json());
-    }
+        // if($response->json() == response(null)) {
+        //     throw new Error("database mode tidak ditemukan");
+        // }
+    // }
+            // catch (error) {
+
+            //     }
+
+
+            }
 }
