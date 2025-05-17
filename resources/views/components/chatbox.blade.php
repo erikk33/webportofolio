@@ -7,18 +7,107 @@
     z-index: 1000;
 }
 
+/* Add these new styles */
+@keyframes floatBubble {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(3deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top: 4px solid #6e48aa;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+        display: none;
+    }
 
     #chatWindow {
-        backdrop-filter: blur(15px);
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        border-radius: 16px;
-        color: #000;
-        transition: all 0.3s ease-in-out;
-        /* opacity: 0;
-        animation: fadeIn 2s forwards; */
-    }
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Container untuk bubble */
+#chatWindow .bubbles {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Bubble 3D style */
+#chatWindow .bubble {
+  position: absolute;
+  bottom: -60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  animation: rise 12s infinite ease-in;
+  opacity: 0.6;
+  will-change: bottom, opacity;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive bubble sizes and animation */
+#chatWindow .bubble:nth-child(1) {
+  width: 40px; height: 40px; left: 10%;
+  animation-duration: 9s;
+}
+#chatWindow .bubble:nth-child(2) {
+  width: 25px; height: 25px; left: 25%;
+  animation-duration: 11s; animation-delay: 2s;
+}
+#chatWindow .bubble:nth-child(3) {
+  width: 50px; height: 50px; left: 45%;
+  animation-duration: 13s; animation-delay: 3s;
+}
+#chatWindow .bubble:nth-child(4) {
+  width: 30px; height: 30px; left: 65%;
+  animation-duration: 10s; animation-delay: 1.5s;
+}
+#chatWindow .bubble:nth-child(5) {
+  width: 20px; height: 20px; left: 80%;
+  animation-duration: 12s; animation-delay: 4s;
+}
+
+/* Animasi vertikal + opacity dinamis */
+@keyframes rise {
+  0% {
+    bottom: -60px;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    bottom: 460px;
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+
+
+
     /* @keyframes fadeIn{
        to {
         opacity: 1;
@@ -63,14 +152,7 @@
     pointer-events: auto;
     z-index: 9998;
 }
-    .closeChat {
-    background: none; border: none; font-size: 18px; color: white; border-radius: 20%; opacity: 0; animation: fadeInClose 2s forwards;
-    }
-@keyframes fadeInClose {
-    to {
-        opacity: 1;
-    }
-}
+
 .chat-icon {
     z-index: 9998;
 }
@@ -78,22 +160,34 @@
 .checkbox-label {
     pointer-events: auto; /* bisa klik */
 }
-
+#closeChat {
+    background: none !important; border: none; font-size: 18px; color: white; border-radius: 20%; opacity: 0; animation: fadeInClose 2s forwards;
+    }
+@keyframes fadeInClose {
+    to {
+        opacity: 1;
+    }
+}
 </style>
 
 
 <div id="chatbot" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
     <button id="chatToggle" class="chat-icon">💬</button>
 
-    <div id="chatWindow" style="display: none; width: 320px; height: 460px; padding: 16px;">
+    <div id="chatWindow" class="bubble" style="display: none; width: 320px; height: 460px; padding: 16px;">
+        <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <!-- Tambahkan elemen .bubble sesuai kebutuhan -->
+  </div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
             <strong style="font-size: 16px;">ChatBot</strong>
-            <button id="closeChat" style=" background: none; border: none; font-size: 18px; color: white; border-radius: 20%; opacity: 0; animation: fadeInClose 1.5s forwards; @keyframes fadeInClose {
-            to {
-            opacity : 0;}
-            }" >✖</button>
+            <button id="closeChat">✖</button>
         </div>
-        <div id="chatMessages" style="height: 300px; overflow-y: auto; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; margin-bottom: 10px;"></div>
+        <div id="chatMessages" style="height: 300px; overflow-y: auto; background: rgba(0, 0, 0, 0.1); padding: 10px; border-radius: 8px; margin-bottom: 10px;"></div>
         <form id="chatForm">
             <input type="text" id="chatInput" placeholder="Tulis pesan..." />
             <button type="submit" style="margin-top: 6px; width: 100%;">Kirim</button>

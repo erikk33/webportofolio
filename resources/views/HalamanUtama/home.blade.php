@@ -144,7 +144,7 @@
         checkbox.addEventListener("change", () => {
             if (checkbox.checked) {
                 //! Add localstorage for implemetation same  darkmode use any page
-                // html.setAttribute("data-bs-theme", "dark");
+                html.setAttribute("data-bs-theme", "dark");
                 // localStorage.getItem("checkbox");
             } else {
                 html.setAttribute("data-bs-theme", "light")

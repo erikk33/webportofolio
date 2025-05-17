@@ -18,7 +18,7 @@ p {
     width: 600px;
     height: 280px;
     overflow-y: scroll;
-    background-image: url("/assets/jellyFishimage.jpg");
+    background-image: url("/assets/CloudImage.jpg");
     -webkit-mask-image: linear-gradient(rgb(0 0 0/ 90%));
     mask-image: radial-gradient(rgb(0 0  0 / 100%) );
     mask-size: cover;
