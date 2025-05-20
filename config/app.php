@@ -58,7 +58,7 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL'),
-    'font' =>env('APP_FONT','Arial'),
+    'font' =>env('APP_FONT','Rubik'),
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

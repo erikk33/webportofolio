@@ -3,6 +3,7 @@
   #chatbot {
     position: fixed;
     bottom: 20px;
+    top: 30px;
     left: 20px;
     z-index: 1000;
 }

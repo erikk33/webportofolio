@@ -1,4 +1,17 @@
 <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Maven+Pro&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    /*styling to navbar*/
+    .navbarOnly {
+    font-family:{{$appFont}};
+    font-optical-sizing: auto;
+    font-size: normal;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+</style>
 <!--Use library boostrap-->
 <nav class="navbarOnly navbar navbar-expand-lg bg-body-tertiary text-center">
     <div class="container-fluid justify-content-center">
@@ -26,8 +39,8 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#"><img
-                            src="https://res.cloudinary.com/ddhfubnez/image/upload/v1747441140/fotoDiri_j5mj43.jpg" style="border-radius: 50%"; alt="user image"
-                            width="25px" height="25px"></a>
+                            src="https://res.cloudinary.com/ddhfubnez/image/upload/v1747441140/fotoDiri_j5mj43.jpg"
+                            style="border-radius: 50%"; alt="user image" width="25px" height="25px"></a>
                 </li>
                 {{-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>

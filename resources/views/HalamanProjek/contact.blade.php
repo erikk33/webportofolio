@@ -37,6 +37,10 @@ border-radius: 50%;"
 <script>
     const html = document.getElementById("contactPage");
     const checkbox = document.getElementById("checkbox");
+    const savedTheme = localStorage.getItem("data-bs-theme","dark");
+    if(savedTheme) {
+        html.setAttribute("data-bs-theme",savedTheme);
+    }
     checkbox.addEventListener("change",()=> {
         if (checkbox.checked) {
             html.setAttribute("data-bs-theme","dark");

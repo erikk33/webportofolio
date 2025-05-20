@@ -21,8 +21,9 @@
 
 
 <body>
+    <!--perbaikan pada posisi chatbox agar tidak bentrok dengan tampilan aksebelitas menu-->
     <x-chatbox/>
-    {{-- <x-aksebelity-menu/> --}}
+    <x-aksebelity-menu/>
     <main>
         <img src="/assets/officeRoom.jpg" class="img-fluid rounded mx-auto d-block mt-4" style="width: 720px; width: 480px; align-content: center;"  alt="...">
         <div class="container mt-3"></div>
@@ -141,13 +142,19 @@
     <script>
         const html = document.getElementById("htmlPage");
         const checkbox = document.getElementById("checkbox");
+        const savedTime = localStorage.getItem("data-bs-theme", "dark");
+        if(savedTime == localStorage.getItem("data-bs-theme", "dark")) {
+            html.setAttribute("data-bs-theme", savedTime);
+        }
         checkbox.addEventListener("change", () => {
             if (checkbox.checked) {
                 //! Add localstorage for implemetation same  darkmode use any page
                 html.setAttribute("data-bs-theme", "dark");
                 // localStorage.getItem("checkbox");
+                localStorage.setItem("data-bs-theme", "dark");
             } else {
-                html.setAttribute("data-bs-theme", "light")
+                html.setAttribute("data-bs-theme", "light");
+                localStorage.setItem("data-bs-theme", "light");
             }
         })
 
