@@ -18,7 +18,7 @@
 
     "exit": "",
 
-    "/help": "question can you write :\n<p>siapa author website ini ?\n<p>tentang server ini ?\n<p>kapan web porto ini dibuat ?\n<p>informasi contact author ?\n<p>framework yang digunakan web ini ?\n<p>versi laravel yang digunakan ?\n<p>region author ?\n<p>akun linkedin author ?\n<p>akun sosial media author ?\n<p>informasi api author ?\n<p>Anime yang ditunggu author ?\n<p>Pelatihan apa saja yang berjalan ?",
+    "/help": "question can you write :\n<p>siapa author website ini ?\n<p>tentang server ini ?\n<p>kapan web porto ini dibuat ?\n<p>informasi contact author ?\n<p>framework yang digunakan web ini ?\n<p>versi laravel yang digunakan ?\n<p>region author ?\n<p>akun linkedin author ?\n<p>akun sosial media author ?\n<p>informasi api author ?\n<p>Anime yang ditunggu author ?\n<p>Pelatihan apa saja yang berjalan ? \n<p>sertifikasi yang sedang diikuti oleh author ?",
 
     "akun linkedin author ?": "https://www.linkedin.com/in/putu-erik-cahyadi-3b2100244/",
     "akun sosial media author ?": "Facebook : https://www.facebook.com/putu.erik.56/\nInstagram : https://www.instagram.com/rikkukawakami/",
@@ -27,5 +27,7 @@
     "anime yang ditunggu author ?": "Kimetsu no yaiba infinity castle",
 
     "pelatihan apa saja yang berjalan ?": "pelatihan yang masih author ikuti sebagai berikut : https://www.coursera.org/learn/intro-to-devops/home/module/1",
-    "pelatihan free swag ?" : "Google arcade"
+    "pelatihan free swag ?" : "Google arcade",
+
+    "sertifikasi yang sedang diikuti oleh author ?" : "Coursera"
   }

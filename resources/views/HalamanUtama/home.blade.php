@@ -25,8 +25,16 @@
     <x-chatbox/>
     <x-aksebelity-menu/>
     <main>
+        <section id="welcomeSection" class="onWelcome">
+            <div class="welcome-content">
+                <h1 class="welcome-title">Welcome to My Portfolio</h1>
+                <p class="welcome-subtitle">Creative Developer & Designer</p>
+            </div>
+            <div class="particles-container" id="airfield"></div>
+        </section>
         <img src="/assets/officeRoom.jpg" class="img-fluid rounded mx-auto d-block mt-4" style="width: 720px; width: 480px; align-content: center;"  alt="...">
         <div class="container mt-3"></div>
+
         <section>
             <div class="container mt-2">
                 <p>
@@ -158,7 +166,109 @@
             }
         })
 
+// code welcome particle
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('airfield');
+    const airplaneCount = 8;
 
+    // Create airplanes with trails
+    for (let i = 0; i < airplaneCount; i++) {
+        createAirplane(container);
+    }
+
+    // Parallax effect
+    document.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+        container.style.transform = `translateX(${xAxis}px) translateY(${yAxis}px)`;
+    });
+});
+
+function createAirplane(container) {
+    const airplane = document.createElement('div');
+    airplane.className = 'airplane';
+
+    // Random properties
+    const size = 0.7 + Math.random() * 0.6;
+    const duration = 20 + Math.random() * 30;
+    const startY = Math.random() * window.innerHeight;
+    const endY = startY + (Math.random() * 200 - 100);
+    const curve = Math.random() * 100 - 50;
+
+    // Initial position
+    airplane.style.cssText = `
+        transform: scale(${size});
+        left: -50px;
+        top: ${startY}px;
+    `;
+
+    container.appendChild(airplane);
+
+    // Animate airplane
+    const startTime = Date.now();
+    let lastX = -50;
+    let lastY = startY;
+    let trailPoints = [];
+
+    function animate() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / (duration * 1000), 1);
+
+        if (progress < 1) {
+            // Cubic bezier curve path
+            const x = progress * (window.innerWidth + 100);
+            const y = startY + (endY - startY) * progress + curve * Math.sin(progress * Math.PI);
+
+            airplane.style.transform = `scale(${size}) rotate(${Math.atan2(y - lastY, x - lastX)}rad)`;
+            airplane.style.left = `${x}px`;
+            airplane.style.top = `${y}px`;
+
+            // Create trail
+            if (elapsed % 50 < 10) { // Reduce trail density
+                const trail = document.createElement('div');
+                trail.className = 'trail';
+
+                const length = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
+                const angle = Math.atan2(y - lastY, x - lastX);
+
+                trail.style.cssText = `
+                    width: ${length}px;
+                    left: ${lastX}px;
+                    top: ${lastY}px;
+                    transform: rotate(${angle}rad);
+                    opacity: 0.7;
+                    animation: trailFade ${duration/5}s linear forwards;
+                `;
+
+                container.appendChild(trail);
+                trailPoints.push(trail);
+
+                // Clean up old trails
+                if (trailPoints.length > 50) {
+                    const oldTrail = trailPoints.shift();
+                    if (oldTrail && oldTrail.parentNode) {
+                        oldTrail.parentNode.removeChild(oldTrail);
+                    }
+                }
+            }
+
+            lastX = x;
+            lastY = y;
+
+            requestAnimationFrame(animate);
+        } else {
+            // Reset airplane
+            airplane.style.left = '-50px';
+            airplane.style.top = `${Math.random() * window.innerHeight}px`;
+            lastX = -50;
+            lastY = parseFloat(airplane.style.top);
+            startTime = Date.now();
+            animate();
+        }
+    }
+
+    animate();
+}
     </script>
 </body>
 
