@@ -68,6 +68,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # webportofolio
 
 fitur fitur yang sudah diterapakan : 
+
 night mode
 
 chatbot 
@@ -75,6 +76,7 @@ chatbot
 aksebelitas mode 
 
 fitur yang masih dikembangkan :
+
 register 
 
 login 
